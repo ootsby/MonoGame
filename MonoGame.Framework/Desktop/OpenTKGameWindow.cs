@@ -54,7 +54,7 @@ using OpenTK.Graphics;
 
 namespace Microsoft.Xna.Framework
 {
-    class OpenTKGameWindow : GameWindow, IDisposable
+    public class OpenTKGameWindow : GameWindow, IDisposable
     {
         private bool _isResizable;
         private bool _isBorderless;
