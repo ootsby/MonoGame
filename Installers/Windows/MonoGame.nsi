@@ -84,13 +84,8 @@ Section "MonoGame Core Components" CoreComponents ;No components page, name is n
 
   SetOutPath ${MSBuildInstallDir}
   File '..\monogame.ico'
-  File /r '..\..\MonoGame.ContentPipeline\ContentProcessors\bin\Release\*.dll'
-  File '..\..\MonoGame.ContentPipeline\*.targets'
   File '..\..\MonoGame.Framework.Content.Pipeline\MonoGame.Content.Builder.targets'
-  File '..\..\ThirdParty\Dependencies\NAudio\*.dll'
   File '..\..\ThirdParty\Dependencies\SharpDX\Windows\*.*'
-  File /nonfatal '..\..\ThirdParty\Dependencies\NAudio\*.xml'
-  File /nonfatal '..\..\ThirdParty\Dependencies\NAudio\*.txt' 
   File '..\..\ThirdParty\Dependencies\ManagedPVRTC\x86\pvrtc.dll'
   File /oname=libmojoshader.dll  '..\..\ThirdParty\Dependencies\MojoShader\Windows\libmojoshader_32.dll'
   File '..\..\ThirdParty\Dependencies\lame_enc.dll'
@@ -162,11 +157,13 @@ Section "MonoGame Core Components" CoreComponents ;No components page, name is n
   SetOutPath '$INSTDIR\Assemblies\WindowsPhone\ARM'
   File '..\..\MonoGame.Framework\bin\WindowsPhone\ARM\Release\*.dll'
   File '..\..\MonoGame.Framework\bin\WindowsPhone\ARM\Release\*.xml'
+  File '..\..\MonoGame.Framework\bin\WindowsPhone\ARM\Release\*.winmd'
 
   ; Install Windows Phone x86 Assemblies
   SetOutPath '$INSTDIR\Assemblies\WindowsPhone\x86'
   File '..\..\MonoGame.Framework\bin\WindowsPhone\x86\Release\*.dll'
   File '..\..\MonoGame.Framework\bin\WindowsPhone\x86\Release\*.xml'
+  File '..\..\MonoGame.Framework\bin\WindowsPhone\x86\Release\*.winmd'
 
   ; Intall iOS Assemblies
   IfFileExists `$PROGRAMFILES\MSBuild\Xamarin\iOS\*.*` InstalliOSAssemblies SkipiOSAssemblies
